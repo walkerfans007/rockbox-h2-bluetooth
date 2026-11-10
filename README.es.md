@@ -4,19 +4,39 @@
 
 **Etiquetas:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
-## ⬇️ Descarga
-
-El paquete de firmware está en la **[página de Releases](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases)**, no en la lista de archivos de arriba.
-
-| Archivo | Descarga directa |
-|---|---|
-| Paquete de firmware (descomprimir en la raíz de la tarjeta SD) | **[rockbox-h2bt-843986adb6-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** (34.7 MB) |
-| Código fuente (GPL) | [Walkerfans-H2BT-source-843986adb6-261110.tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) |
-| Sumas de verificación | [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) |
-
 > **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
 
-**Versión de desarrollo comunitaria · 843986adb6-261110 · versión preliminar** · [English](README.md)
+## ¿Qué edición debo instalar?
+
+Hay **dos ediciones independientes**. Comparten fuentes, traducciones, barra de estado y funciones Bluetooth. **La única diferencia es la salida de audio por cable.**
+
+| | **Estándar** — recomendada | **24 bits experimental** |
+|---|---|---|
+| Versión | `843986adb6-261110` | `a49363b515-24bit-261110` |
+| Publicación | [h2bt-843986adb6-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | [h2bt-a49363b515-24bit-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) |
+| Audio por cable | 16 bits (igual que el original) | **24 bits hasta el DAC** |
+| Audio Bluetooth | 16 bits, con pérdida (SBC / aptX / aptX HD / LDAC) | igual: 16 bits, con pérdida |
+| Estado | funcionando en el H2 de desarrollo | ⚠️ audio aún sin validar en hardware |
+| Cambios | [CHANGES-843986adb6-standard.md](CHANGES-843986adb6-standard.md) | [CHANGES-a49363b515-24bit-experimental.md](CHANGES-a49363b515-24bit-experimental.md) |
+
+**Qué cambia la edición Estándar** (respecto a la rama Bluetooth original de BlackIsBlack):
+- Fuente predeterminada compatible con chino: Noto Sans SC 20 px, además de 16/18/22/24 px y el paquete completo de fuentes de Rockbox.
+- Chino simplificado corregido; chino tradicional rehecho con términos de Taiwán; frases japonesas y francesas que faltaban; textos Bluetooth en siete idiomas.
+- Barra de estado de menús con iconos de 20 px, a 10 px del borde superior.
+- El Bluetooth ya no se bloquea ni falla si falta el controlador o llegan datos erróneos; mensajes claros en hardware no compatible.
+- Script de compilación reproducible.
+- Procesamiento de audio sin cambios: 16 bits.
+
+**Qué añade la edición de 24 bits experimental** (todo lo anterior, más):
+- DSP de música, búfer, fundido cruzado, mezclador, volumen por software y salida I2S por cable mantienen precisión de 24 bits.
+- Voz, pitidos, audio USB y plugins siguen en 16 bits; el Bluetooth se convierte a 16 bits antes de codificar.
+- Sin DSD nativo/DoP; límite de 192 kHz; no es bit-perfect con ecualizador, volumen o remuestreo activos.
+
+Instale **solo una** edición a la vez y no mezcle archivos de los dos paquetes. Haga primero una copia de `.rockbox`; cualquiera de las dos se reemplaza instalando el paquete completo de la otra.
+
+## Acerca de este repositorio
+
+**Versión de desarrollo comunitaria · dos ediciones: Estándar `843986adb6-261110` (recomendada) y 24 bits experimental `a49363b515-24bit-261110` · versión preliminar** · [English](README.md)
 
 Mantenido y empaquetado por **WalkerFans Team**, basado en Rockbox y en la rama Bluetooth de BlackIsBlack. No es una versión oficial de Rockbox y no implica ninguna certificación de códecs.
 
