@@ -14,6 +14,8 @@ Hay **dos ediciones independientes**. Comparten fuentes, traducciones, barra de 
 |---|---|---|
 | Versión | `843986adb6-261110` | `a49363b515-24bit-261110` |
 | Publicación | [h2bt-843986adb6-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | [h2bt-a49363b515-24bit-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) |
+| ⬇️ **Descarga** (descomprimir en la raíz de la tarjeta SD) | **[rockbox-h2bt-843986adb6-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** (34,7 MB) | **[rockbox-h2bt-a49363b515-24bit-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/rockbox-h2bt-a49363b515-24bit-261110.zip)** (34,7 MB) |
+| Código fuente (GPL) · sumas | [código .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) | [código .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/Walkerfans-H2BT-source-a49363b515-24bit-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/SHA256SUMS-a49363b515-24bit-261110) |
 | Audio por cable | 16 bits (igual que el original) | **24 bits hasta el DAC** |
 | Audio Bluetooth | 16 bits, con pérdida (SBC / aptX / aptX HD / LDAC) | igual: 16 bits, con pérdida |
 | Estado | funcionando en el H2 de desarrollo | ⚠️ audio aún sin validar en hardware |
@@ -62,7 +64,7 @@ No es un `update.upt` de fábrica y no se instala con el actualizador de fábric
 ## Limitaciones conocidas
 
 - El Bluetooth solo funciona en hardware revisión 4.
-- Los archivos DSD se convierten a PCM; la salida de audio es de 16 bits. No hay salida DSD nativa ni de 24 bits.
+- Los archivos DSD se convierten a PCM; no hay salida DSD nativa. La edición Estándar emite 16 bits; la edición experimental emite 24 bits por cable (el Bluetooth sigue en 16 bits).
 - Probado en un H2 de desarrollo. LDAC, aptX y otros códecs no se han probado con una amplia gama de auriculares.
 - Noto Sans SC no cubre coreano, árabe, hebreo, tailandés ni algunas letras de Europa central; para esos idiomas elige 16-GNU-Unifont en Settings → Theme Settings → Font.
 - **Firmware del controlador:** la compilación incluye el parche de RAM del controlador Bluetooth Broadcom/Cypress (`BCM4343A1_001.002.009.0122.0538`). No se encontraron condiciones de licencia ni de redistribución para este archivo y su origen no se ha verificado.
