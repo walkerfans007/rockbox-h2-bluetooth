@@ -4,6 +4,16 @@
 
 **Tags:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
+## ⬇️ Download
+
+The firmware package is attached to the **[Releases page](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases)**, not stored in the file list above.
+
+| File | Direct download |
+|---|---|
+| Firmware package (unzip to the SD card root) | **[rockbox-h2bt-843986adb6-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** (34.7 MB) |
+| Source code (GPL) | [Walkerfans-H2BT-source-843986adb6-261110.tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) |
+| Checksums | [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) |
+
 > **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
 
 **Community development build · 843986adb6-261110 · pre-release**
