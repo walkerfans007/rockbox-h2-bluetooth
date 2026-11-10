@@ -4,19 +4,39 @@
 
 **Tags:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
-## ⬇️ Download
-
-The firmware package is attached to the **[Releases page](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases)**, not stored in the file list above.
-
-| File | Direct download |
-|---|---|
-| Firmware package (unzip to the SD card root) | **[rockbox-h2bt-843986adb6-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** (34.7 MB) |
-| Source code (GPL) | [Walkerfans-H2BT-source-843986adb6-261110.tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) |
-| Checksums | [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) |
-
 > **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
 
-**Community development build · 843986adb6-261110 · pre-release**
+## Which edition should I install?
+
+There are **two separate editions**. They share the same fonts, translations, status bar and Bluetooth features. **The only difference is the wired audio path.**
+
+| | **Standard** — recommended | **24-bit experimental** |
+|---|---|---|
+| Version | `843986adb6-261110` | `a49363b515-24bit-261110` |
+| Release | [h2bt-843986adb6-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | [h2bt-a49363b515-24bit-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) |
+| Wired audio | 16-bit (same as upstream) | **24-bit kept to the DAC** |
+| Bluetooth audio | 16-bit, lossy (SBC / aptX / aptX HD / LDAC) | same: 16-bit, lossy |
+| Status | running on the development H2 | ⚠️ not yet audio-validated on hardware |
+| Changes | [CHANGES-843986adb6-standard.md](CHANGES-843986adb6-standard.md) | [CHANGES-a49363b515-24bit-experimental.md](CHANGES-a49363b515-24bit-experimental.md) |
+
+**What the Standard edition changes** (compared with the upstream BlackIsBlack Bluetooth branch):
+- Chinese-capable default font: Noto Sans SC 20 px, plus 16/18/22/24 px and the full Rockbox font pack.
+- Corrected Simplified Chinese; Traditional Chinese rebuilt with Taiwan wording; missing Japanese and French strings added; Bluetooth strings in seven languages.
+- Menu status bar with 20 px icons, 10 px from the top.
+- Bluetooth no longer freezes or crashes on a missing controller or bad data; clear messages on unsupported hardware.
+- Reproducible build script.
+- Audio processing unchanged: 16-bit.
+
+**What the 24-bit experimental edition adds** (everything above, plus):
+- Music DSP, buffer, crossfade, mixer, software volume and wired I2S output keep 24-bit precision.
+- Voice, beeps, USB audio and plugins stay 16-bit; Bluetooth is converted to 16-bit before encoding.
+- No native DSD/DoP, sample-rate limit still 192 kHz, not bit-perfect when EQ/volume/resampling are active.
+
+Install **one** edition at a time and never mix files from the two packages. Back up `.rockbox` first; either edition can be replaced by the other by installing its full package.
+
+## About this repository
+
+**Community development build · two editions: Standard `843986adb6-261110` (recommended) and 24-bit experimental `a49363b515-24bit-261110` · pre-release**
 
 Maintained and packaged by **WalkerFans Team**, based on Rockbox and the BlackIsBlack Bluetooth branch. Preserve all upstream author credits. This is not an official Rockbox release and does not imply codec certification.
 
@@ -26,7 +46,7 @@ Changes include Bluetooth fault handling, larger CJK-capable fonts, reviewed Chi
 
 The package contains 518 files and has been copied/verified on the development H2 while preserving settings and pairing records. That confirms package delivery, not broad headphone compatibility, continuous playback stability or audio-output measurement.
 
-Read [the manual](MANUAL.en.md), [changes](CHANGELOG.md) and [release notes](RELEASE.md). **Español:** [README](README.es.md) · [Manual](MANUAL.es.md). The build script and provenance notes are included with the source.
+Read [the manual](MANUAL.en.md), [changes](CHANGELOG.md) and release notes ([Standard](RELEASE.md) · [24-bit experimental](RELEASE-a49363b515-24bit.md)). **Español:** [README](README.es.md) · [Manual](MANUAL.es.md). The build script and provenance notes are included with the source.
 
 **Controller firmware notice:** the build includes Broadcom/Cypress Bluetooth controller patch RAM (`BCM4343A1_001.002.009.0122.0538`). No license or redistribution terms for this file were found in the source branch, and its origin has not been verified. No redistribution clearance is claimed. See [UPSTREAM-PROVENANCE.txt](UPSTREAM-PROVENANCE.txt).
 

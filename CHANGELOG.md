@@ -1,6 +1,13 @@
 # Changes — WalkerFans H2 Bluetooth
 
-## 843986adb6-261110
+## a49363b515-24bit-261110 — 24-bit experimental edition
+- Separate edition built from the Standard edition plus two commits (`0855be3ef4`, `a49363b515`).
+- Wired audio path keeps 24-bit precision (DSP, buffer, crossfade, mixer, software volume, I2S output).
+- Voice, beeps, USB audio and plugins stay 16-bit; Bluetooth is converted to 16-bit before the encoder.
+- Not yet audio-validated on hardware. Full details: [CHANGES-a49363b515-24bit-experimental.md](CHANGES-a49363b515-24bit-experimental.md).
+
+## 843986adb6-261110 — Standard edition (recommended)
+Full details: [CHANGES-843986adb6-standard.md](CHANGES-843986adb6-standard.md).
 - Added 20-pixel menu status icons with a 10-pixel top margin; moved menu content below the bar.
 - Fixed status asset inclusion for quoted build model names; validated the final 518-file package.
 - Regenerated Traditional Chinese from the corrected Simplified Chinese with Taiwan UI wording.

@@ -1,10 +1,12 @@
-# WalkerFans H2 Rockbox Bluetooth — 843986adb6-261110 Preview
+# WalkerFans H2 Rockbox Bluetooth — 843986adb6-261110 Standard Preview
 
 **WalkerFans for HIFIWALKER H2 Hi-Fi Player / DAP / MP3 Music Player — Rockbox upgrade with Bluetooth.**
 
 **Tags:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
 > **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
+
+> **Standard edition — recommended.** This is the 16-bit edition for everyday use. A separate [24-bit experimental edition](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) (`a49363b515-24bit-261110`) keeps 24-bit precision on the wired output but has not yet been audio-validated on hardware. See [Which edition should I install?](https://github.com/walkerfans007/rockbox-h2-bluetooth/#which-edition-should-i-install) and the full [Standard edition changelog](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/CHANGES-843986adb6-standard.md).
 
 A community development build of Rockbox with Bluetooth audio for the HIFI WALKER H2 **hardware revision 4** (original firmware **V1.9–V2.3**). Based on Rockbox master and the BlackIsBlack H2 Bluetooth branch.
 
@@ -28,7 +30,7 @@ This is not a factory `update.upt` and cannot be installed with the factory upda
 ## Known limitations
 
 - Bluetooth works on hardware revision 4 only.
-- DSD files are converted to PCM; audio output is 16-bit. Native DSD and 24-bit output are not supported.
+- Audio is processed and output at 16 bits, unchanged from upstream; DSD files are converted to PCM (no native DSD or DoP). For 24-bit wired output, see the separate [24-bit experimental edition](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview).
 - Tested on one development H2. LDAC, aptX and other codecs have not been tested across headphones, and no codec certification is implied.
 - Noto Sans SC does not cover Korean, Arabic, Hebrew, Thai or some Central European letters; for those languages choose 16-GNU-Unifont under Settings → Theme Settings → Font.
 - **Controller firmware:** the build includes Broadcom/Cypress Bluetooth controller patch RAM (`BCM4343A1_001.002.009.0122.0538`). No license or redistribution terms for this file were found, and its origin has not been verified.
@@ -54,7 +56,7 @@ Maintained and released by **WalkerFans Team**. Not an official Rockbox release 
 
 > **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
 
-Versión de desarrollo de Rockbox con audio Bluetooth para el HIFIWALKER H2 con hardware revisión 4 (firmware original V1.9–V2.3). Incluye fuentes más grandes compatibles con chino y japonés, traducciones corregidas y un Bluetooth más fiable. La salida de audio es de 16 bits y el DSD se convierte a PCM. Consulta el [README en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/README.es.md) y el [manual en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/MANUAL.es.md).
+Versión de desarrollo de Rockbox con audio Bluetooth para el HIFIWALKER H2 con hardware revisión 4 (firmware original V1.9–V2.3). Incluye fuentes más grandes compatibles con chino y japonés, traducciones corregidas y un Bluetooth más fiable. Es la **edición Estándar recomendada**: la salida de audio es de 16 bits y el DSD se convierte a PCM. Para salida por cable de 24 bits existe una [edición experimental de 24 bits](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview), aún sin validar en hardware. Consulta el [README en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/README.es.md) y el [manual en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/MANUAL.es.md).
 
 ## Disclaimer
 
