@@ -1,5 +1,7 @@
 # WalkerFans H2 Bluetooth — Quick Manual
 
+> **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
+
 Version `843986adb6-261110`. Bluetooth is for **H2 hardware revision 4 (original V1.9–V2.3)**. This ZIP updates an existing erosqnative Rockbox installation; it is not a factory update.upt. Establish the correct Rockbox bootloader first. New-flash V2.3 units require a matching HW4 bootloader dated 2026-02-03 or later.
 
 Back up the entire `.rockbox` directory, including config.cfg and bt_config.conf. Pairing records contain link keys: never publish them. Extract the ZIP and merge its `.rockbox` directory directly into the card root, replacing program files without nesting an extra folder. Verify files, safely eject, unplug and reboot. Confirm `843986adb6-261110` in system information.

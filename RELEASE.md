@@ -4,6 +4,8 @@
 
 **Tags:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
+> **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
+
 A community development build of Rockbox with Bluetooth audio for the HIFI WALKER H2 **hardware revision 4** (original firmware **V1.9–V2.3**). Based on Rockbox master and the BlackIsBlack H2 Bluetooth branch.
 
 ## Highlights
@@ -49,6 +51,8 @@ Bluetooth port by Skye Green and Cameron (BlackIsBlack), on top of the Rockbox p
 Maintained and released by **WalkerFans Team**. Not an official Rockbox release and not supported by the Rockbox project.
 
 ## Español
+
+> **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
 
 Versión de desarrollo de Rockbox con audio Bluetooth para el HIFIWALKER H2 con hardware revisión 4 (firmware original V1.9–V2.3). Incluye fuentes más grandes compatibles con chino y japonés, traducciones corregidas y un Bluetooth más fiable. La salida de audio es de 16 bits y el DSD se convierte a PCM. Consulta el [README en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/README.es.md) y el [manual en español](https://github.com/walkerfans007/rockbox-h2-bluetooth/blob/main/MANUAL.es.md).
 

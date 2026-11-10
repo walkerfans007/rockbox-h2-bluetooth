@@ -4,6 +4,8 @@
 
 **Etiquetas:** #HIFIWALKER #HIFIWALKERH2 #Rockbox #Bluetooth #DAP #MP3Player #HiFiPlayer
 
+> **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
+
 **Versión de desarrollo comunitaria · 843986adb6-261110 · versión preliminar** · [English](README.md)
 
 Mantenido y empaquetado por **WalkerFans Team**, basado en Rockbox y en la rama Bluetooth de BlackIsBlack. No es una versión oficial de Rockbox y no implica ninguna certificación de códecs.

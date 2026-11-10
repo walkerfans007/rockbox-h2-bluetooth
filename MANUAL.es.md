@@ -1,5 +1,7 @@
 # WalkerFans H2 Bluetooth — Manual rápido
 
+> **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
+
 Versión `843986adb6-261110`. El Bluetooth es para el **H2 con hardware revisión 4 (firmware original V1.9–V2.3)**. Este ZIP actualiza una instalación existente de Rockbox erosqnative; no es un `update.upt` de fábrica. Instala primero el cargador de arranque de Rockbox correcto. Las unidades V2.3 con la memoria flash nueva necesitan un cargador HW4 del 2026-02-03 o posterior.
 
 ## Instalación
