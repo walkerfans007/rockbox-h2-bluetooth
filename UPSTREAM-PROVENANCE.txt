@@ -1,0 +1,140 @@
+Rockbox with Bluetooth for the HIFI WALKER H2 - WalkerFans branch notes
+====================================================================
+
+Branch h2-bluetooth. Not an official Rockbox release and not supported by
+the Rockbox project. Bluetooth works on hardware revision 4 only (H2 V1.9
+to V2.3, Eros Q V2.2, Surfans F20 V3.4).
+
+
+Where the code comes from
+-------------------------
+
+Base: upstream Rockbox master, https://github.com/Rockbox/rockbox
+      commit baa2b4564b (2026-11-08).
+
+Bluetooth: https://github.com/BlackIsBlack/rockbox-h2-bluetooth
+      release h2-bt-20261023-2f059ce, every non-merge commit from
+      f2eaa15ac2..2f059ce834 replayed in order with its original author
+      and date; each message ends with "(cherry picked from commit ...)".
+      Authors: Skye Green (Bluedroid port, bt_hci interface, multicodec,
+      erosqnative HCI driver), Cameron (H2 bring-up, UI, fixes).
+
+Conflicts while replaying, all against upstream changes made after
+f2eaa15ac2:
+  - firmware/target/mips/ingenic_x1000/uart-x1000.[ch]: upstream commit
+    dd3d7b8aa3 added uart_rx_timeout() with the same meaning, plus
+    uart_tx_timeout(); upstream's version was kept.
+  - apps/lang/english.lang: upstream and Bluetooth phrases both kept.
+  - docs/CREDITS: both kept.
+Every other file the Bluetooth branch touched is identical to
+BlackIsBlack 2f059ce834 plus upstream's own changes to it.
+
+
+What this branch changes on top
+-------------------------------
+
+  - HCI UART sends time out after a second instead of blocking forever.
+    A chip that holds CTS off (or isn't there) used to hang whatever turned
+    Bluetooth on; now enabling fails cleanly.
+  - A corrupt H4 packet (unknown type, or longer than our receive buffer)
+    no longer panics the player. The driver drops bytes until the line is
+    quiet and carries on; after 16 bad packets in a row it stops the HCI
+    thread instead.
+  - bt_hci_supported(): units older than hardware revision 4 get a clear
+    "Bluetooth needs hardware rev 4 (H2 V1.9 or newer)" message and nothing
+    is powered or reconfigured. "Bluetooth chip not responding" replaces
+    "Bluetooth failed to start (controller -1)".
+  - bt_log.txt (Debug Logging on) records Bluetooth heap use and the UART
+    error counters every time Bluetooth is turned on or off, for leak and
+    long-play tests.
+  - Fonts: the default UI font is 20-NotoSansSC (Noto Sans SC at 20 px,
+    25 px line height) instead of 15-Adobe-Helvetica, which has no CJK
+    glyphs. 16/18/22/24 px are included too, plus the whole Rockbox font
+    pack. Noto Sans SC covers Chinese (simplified and traditional), Japanese
+    kana, Cyrillic, Vietnamese and Western European Latin; it has no
+    Hangul, Arabic, Hebrew or Thai, and no Latin Extended-A (Polish, Czech,
+    Turkish ğış). For those languages pick 16-GNU-Unifont under Settings >
+    Theme Settings > Font.
+  - cabbiev2 Now Playing (320x240): the elapsed/remaining time row is 20 px
+    tall, so it uses 16-NotoSansSC; the track info block shows four lines
+    (album, title, artist, year) at the 20 px font instead of eight.
+  - Translations:
+      Bluetooth strings in Simplified and Traditional Chinese, Japanese,
+      German, French, Spanish and Italian.
+      Simplified Chinese: wrong traditional characters fixed (删, 没) and
+      61 mistranslations corrected (e.g. "Are You Sure?" was "确认重置?",
+      "Peak Filter" was "带通滤波器", "View Map" was "设置迷宫大小").
+      Traditional Chinese: 27 clear errors fixed ("Gain" was "添加",
+      "Keyclick" was "關鍵點", "No" was "不"); about 440 phrases are still
+      missing there and fall back to English.
+      Japanese: 53 missing phrases added (the Database menu was English).
+      French: 13 missing phrases added, one grammar fix.
+  - tools/h2bt/build.sh: one-shot reproducible build (see below).
+
+
+Licences
+--------
+
+  Rockbox                      GPL-2.0-or-later
+  lib/bluedroid (esp-idf)      Apache-2.0
+  lib/bluedroid/libldac        Apache-2.0 (AOSP external/libldac)
+  lib/bluedroid/encoder_for_aptx, encoder_for_aptxhd
+                               Apache-2.0 (AOSP packages/modules/Bluetooth)
+  lib/bluedroid/sbc            Apache-2.0 (AOSP packages/modules/Bluetooth)
+  lib/bluedroid/osi/include/osi/sys_queue.h
+                               BSD-3-Clause (see docs/LICENSES)
+  firmware/target/mips/ingenic_x1000/erosqnative/
+      BCM4343A1_001.002.009.0122.0538.c
+                               Broadcom/Cypress controller patch RAM, no
+                               licence stated anywhere in the source
+                               branch. Origin unverified.
+
+  Noto Sans SC 2.004 (fonts/*-NotoSansSC.fnt, generated at build time)
+                               SIL Open Font License 1.1, (c) 2014-2021
+                               Adobe (http://www.adobe.com/); "Noto" is a
+                               Google trademark. Licence text ships as
+                               .rockbox/fonts/NotoSansSC-LICENSE.txt.
+
+Apache-2.0 code can be combined with GPL code only under GPL version 3, so
+a binary built from this branch is distributable as GPL-3.0 (Rockbox's "or
+later" permits that). A scan of apps/, firmware/ and lib/ found no file
+that is GPL version 2 only; the files with no version stated may be used
+under any version (GPLv2 section 9). This is not legal advice.
+
+The controller firmware is not covered by any of the above. Until its
+redistribution terms are confirmed, treat binaries from this branch as
+internal test builds.
+
+Trademarks: aptX is a Qualcomm trademark and LDAC a Sony trademark. The
+encoders are included; no certification is implied.
+
+
+Building
+--------
+
+  tools/h2bt/build.sh [outdir]
+
+macOS (Apple Silicon) or Linux. On macOS it first builds the GNU tools
+rockboxdev.sh needs from source tarballs with pinned SHA256. It then builds
+mipsel-elf binutils 2.38 + gcc 9.5.0 with tools/rockboxdev.sh, converts
+Noto Sans SC (pinned SHA256) to .fnt with tools/convttf.c against
+FreeType 2.13.3 built from source, builds erosqnative in the fixed path
+/tmp/rb-h2bt (make zip + make fontzip), and writes
+
+  rockbox-h2bt-<commit>-<yymmdd>.zip     the SD card package
+  MANIFEST-<version>.sha256              SHA256 of every file in the zip
+  SHA256SUMS-<version>
+  rockbox-info-<version>.txt
+
+The version string comes from the commit, not the build date, and the zip
+is repacked sorted with fixed timestamps, so the same commit built with the
+same toolchain gives the same rockbox.erosq and the same zip.
+
+
+Installing
+----------
+
+Needs a Rockbox bootloader on the player. On the newer H2 V2.3 with the
+XT26G01C flash, use a bootloader from 2026-02-03 or later (the official
+hw4 one is 1a33d7990a-260203). Extract the zip to the root of the SD card
+and let it replace .rockbox. Pairings live in .rockbox/bt_config.conf.

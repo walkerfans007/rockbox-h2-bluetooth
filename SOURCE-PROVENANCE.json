@@ -1,0 +1,10 @@
+{
+  "commit": "843986adb666d33309a5053e6ed3759d5e862b27",
+  "base": "baa2b4564b",
+  "upstream": "https://github.com/Rockbox/rockbox",
+  "bluetoothUpstream": "https://github.com/BlackIsBlack/rockbox-h2-bluetooth",
+  "bluetoothRelease": "h2-bt-20261023-2f059ce",
+  "publishingCredit": "WalkerFans Team",
+  "releaseApproved": false,
+  "publiclyPublished": false
+}
