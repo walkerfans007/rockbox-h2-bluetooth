@@ -14,6 +14,8 @@ There are **two separate editions**. They share the same fonts, translations, st
 |---|---|---|
 | Version | `843986adb6-261110` | `a49363b515-24bit-261110` |
 | Release | [h2bt-843986adb6-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | [h2bt-a49363b515-24bit-preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) |
+| ⬇️ **Download** (unzip to the SD card root) | **[rockbox-h2bt-843986adb6-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** (34.7 MB) | **[rockbox-h2bt-a49363b515-24bit-261110.zip](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/rockbox-h2bt-a49363b515-24bit-261110.zip)** (34.7 MB) |
+| Source code (GPL) · checksums | [source .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) | [source .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/Walkerfans-H2BT-source-a49363b515-24bit-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/SHA256SUMS-a49363b515-24bit-261110) |
 | Wired audio | 16-bit (same as upstream) | **24-bit kept to the DAC** |
 | Bluetooth audio | 16-bit, lossy (SBC / aptX / aptX HD / LDAC) | same: 16-bit, lossy |
 | Status | running on the development H2 | ⚠️ not yet audio-validated on hardware |
