@@ -18,6 +18,7 @@ There are **two separate editions**. They share the same fonts, translations, st
 | Source code (GPL) · checksums | [source .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/Walkerfans-H2BT-source-843986adb6-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/SHA256SUMS) | [source .tar.gz](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/Walkerfans-H2BT-source-a49363b515-24bit-261110.tar.gz) · [SHA256SUMS](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/SHA256SUMS-a49363b515-24bit-261110) |
 | Wired audio | 16-bit (same as upstream) | **24-bit kept to the DAC** |
 | Bluetooth audio | 16-bit, lossy (SBC / aptX / aptX HD / LDAC) | same: 16-bit, lossy |
+| Bluetooth direction | **Transmit only** (H2 → headphones/speakers). The H2 is not discoverable and cannot receive audio from a phone; phone pairing fails. Use the original firmware for receiver mode. | same: transmit only |
 | Status | running on the development H2 | ⚠️ not yet audio-validated on hardware |
 | Changes | [CHANGES-843986adb6-standard.md](CHANGES-843986adb6-standard.md) | [CHANGES-a49363b515-24bit-experimental.md](CHANGES-a49363b515-24bit-experimental.md) |
 
