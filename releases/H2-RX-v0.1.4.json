@@ -1,0 +1,8 @@
+{
+  "version": "H2-RX-v0.1.4-2026-11-12",
+  "firmware_source_commit": "a897b73317c3a677c6ee4bac6d6b2836cc802935",
+  "firmware_source_branch": "h2-bluetooth-24bit-receiver",
+  "firmware_source_asset": "rockbox-h2bt-H2-RX-v0.1.4-2026-11-12-source.tar.gz",
+  "release_tag_scope": "Publication documentation only; firmware source is the attached source archive",
+  "asset_checksums": "1aa33e9cebd451350c691a152553a3137320173784ffb535eff9fced2f3a701f  rockbox-h2bt-H2-RX-v0.1.4-2026-11-12.zip\n3dceadc35760cfe2ca63658f425f9b0289922b1388dee0a4b95bc5070e68a71b  rockbox-h2bt-H2-RX-v0.1.4-2026-11-12-source.tar.gz\n6c84ba8fa470b783573c0a62c3cae79fc24bb94d5107c635a763720a00723034  MANIFEST-H2-RX-v0.1.4-2026-11-12.sha256\n8f446f3a97d826af6cd9ee488583c3789b364f4fd383be7c99f258d02ec0cd1c  rockbox-info-H2-RX-v0.1.4-2026-11-12.txt\n"
+}
