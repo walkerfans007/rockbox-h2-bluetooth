@@ -6,9 +6,25 @@
 
 > **Important — based on HIFIWALKER original firmware V2.3.** This build was developed and tested on an H2 running the original HIFIWALKER firmware **V2.3**. Other firmware versions have not been tested and may not be compatible. If your player runs a different version, back up first and upgrade at your own risk.
 
+## Experimental RX edition: phone reception and language UI
+
+**H2-RX-v0.1.4-2026-11-12** adds a separate **phone → H2 SBC receiver mode** to the experimental 24-bit wired branch. It also adds native language names, Settings → Language, per-language badges, a preferred language order and 14 px top status icons.
+
+**Status:** installed on the development H2 with file verification; new radio reception, actual audio output, long-play stability and final UI still await hardware validation. Development/device-installation baseline: **original firmware V2.3; Bluetooth hardware revision 4**. Other original-firmware versions may be incompatible.
+
+| Edition | Wired music path | Bluetooth transmission | Phone reception |
+|---|---|---|---|
+| [Standard preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16-bit | Yes | No |
+| [24-bit experimental](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | Experimental 24-bit | Yes; 16-bit encoder input | No |
+| RX v0.1.4 — [Release / Downloads](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2-rx-v0.1.4-preview) | Inherits experimental 24-bit | Separate mode | SBC, 44.1/48 kHz, decoded to 16-bit PCM |
+
+Receiver audio is lossy, not native 24-bit Bluetooth. There is no simultaneous transmit/receive or relay. Use one complete edition at a time and keep a backup for rollback. See the RX release notes for installation, test status and the unresolved controller-firmware redistribution notice.
+
+**[Download RX v0.1.4 ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12.zip)** · [Complete firmware source](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12-source.tar.gz)
+
 ## Which edition should I install?
 
-There are **two separate editions**. They share the same fonts, translations, status bar and Bluetooth features. **The only difference is the wired audio path.**
+There are **three separate editions**. RX adds experimental phone reception and an updated language UI; the following comparison describes the two earlier transmit-only editions.
 
 | | **Standard** — recommended | **24-bit experimental** |
 |---|---|---|
@@ -35,11 +51,11 @@ There are **two separate editions**. They share the same fonts, translations, st
 - Voice, beeps, USB audio and plugins stay 16-bit; Bluetooth is converted to 16-bit before encoding.
 - No native DSD/DoP, sample-rate limit still 192 kHz, not bit-perfect when EQ/volume/resampling are active.
 
-Install **one** edition at a time and never mix files from the two packages. Back up `.rockbox` first; either edition can be replaced by the other by installing its full package.
+Install **one** edition at a time and never mix files from different packages. Back up `.rockbox` first; an edition can be replaced by another by installing its full package.
 
 ## About this repository
 
-**Community development build · two editions: Standard `843986adb6-261110` (recommended) and 24-bit experimental `a49363b515-24bit-261110` · pre-release**
+**Community development builds · Standard, 24-bit experimental and RX v0.1.4 · pre-releases**
 
 Maintained and packaged by **WalkerFans Team**, based on Rockbox and the BlackIsBlack Bluetooth branch. Preserve all upstream author credits. This is not an official Rockbox release and does not imply codec certification.
 

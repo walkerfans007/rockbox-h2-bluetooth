@@ -6,9 +6,25 @@
 
 > **Importante — basado en el firmware original HIFIWALKER V2.3.** Esta versión se desarrolló y probó en un H2 con el firmware original HIFIWALKER **V2.3**. Otras versiones del firmware no se han probado y podrían no ser compatibles. Si tu reproductor tiene otra versión, haz antes una copia de seguridad y actualiza bajo tu propia responsabilidad.
 
+## Edición experimental RX: recepción del móvil e idiomas
+
+**H2-RX-v0.1.4-2026-11-12** añade un modo independiente de **recepción SBC móvil → H2** a la rama experimental de 24 bits por cable. También incorpora nombres nativos, Settings → Language, abreviaturas por idioma, un orden preferido e iconos superiores de 14 px.
+
+**Estado:** instalada en el H2 de desarrollo con verificación de archivos; aún faltan pruebas físicas de recepción, sonido, estabilidad prolongada e interfaz final. Referencia de desarrollo/instalación: **firmware original V2.3; hardware Bluetooth revisión 4**. Otras versiones del firmware original pueden ser incompatibles.
+
+| Edición | Música por cable | Transmisión Bluetooth | Recepción del móvil |
+|---|---|---|---|
+| [Standard preview](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16 bits | Sí | No |
+| [24 bits experimental](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | 24 bits experimentales | Sí; entrada del codificador de 16 bits | No |
+| RX v0.1.4 — [Release / Downloads](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2-rx-v0.1.4-preview) | Conserva los 24 bits experimentales | Modo separado | SBC, 44,1/48 kHz, PCM de 16 bits |
+
+La recepción tiene pérdidas y no es Bluetooth nativo de 24 bits. No hay recepción/transmisión simultáneas ni repetidor. Instale una sola edición completa y conserve una copia para volver atrás. Consulte las notas RX para la instalación, pruebas y el aviso pendiente sobre redistribución del firmware del controlador.
+
+**[Descargar RX v0.1.4 ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12.zip)** · [Código completo del firmware](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12-source.tar.gz)
+
 ## ¿Qué edición debo instalar?
 
-Hay **dos ediciones independientes**. Comparten fuentes, traducciones, barra de estado y funciones Bluetooth. **La única diferencia es la salida de audio por cable.**
+Hay **tres ediciones independientes**. RX añade recepción experimental del móvil y una interfaz de idiomas actualizada; la siguiente comparación describe las dos ediciones anteriores, solo de transmisión.
 
 | | **Estándar** — recomendada | **24 bits experimental** |
 |---|---|---|
@@ -35,11 +51,11 @@ Hay **dos ediciones independientes**. Comparten fuentes, traducciones, barra de 
 - Voz, pitidos, audio USB y plugins siguen en 16 bits; el Bluetooth se convierte a 16 bits antes de codificar.
 - Sin DSD nativo/DoP; límite de 192 kHz; no es bit-perfect con ecualizador, volumen o remuestreo activos.
 
-Instale **solo una** edición a la vez y no mezcle archivos de los dos paquetes. Haga primero una copia de `.rockbox`; cualquiera de las dos se reemplaza instalando el paquete completo de la otra.
+Instale **solo una** edición a la vez y no mezcle archivos de diferentes paquetes. Haga primero una copia de `.rockbox`; una edición se reemplaza instalando el paquete completo de otra.
 
 ## Acerca de este repositorio
 
-**Versión de desarrollo comunitaria · dos ediciones: Estándar `843986adb6-261110` (recomendada) y 24 bits experimental `a49363b515-24bit-261110` · versión preliminar** · [English](README.md)
+**Versiones comunitarias · Standard, 24 bits experimental y RX v0.1.4 · versiones preliminares** · [English](README.md)
 
 Mantenido y empaquetado por **WalkerFans Team**, basado en Rockbox y en la rama Bluetooth de BlackIsBlack. No es una versión oficial de Rockbox y no implica ninguna certificación de códecs.
 
