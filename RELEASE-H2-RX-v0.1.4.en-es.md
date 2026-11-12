@@ -17,11 +17,11 @@ WalkerFans for HIFIWALKER H2 Hi-Fi Player / DAP / MP3 Music Player — Rockbox u
 
 RX extends our experimental 24-bit wired edition with a separate **phone-to-H2 Bluetooth receiver mode**, native language names, a direct Language menu, per-language letter badges and a preferred language order. Existing Standard and 24-bit packages remain separate.
 
-| Edition | Local wired music path | H2 → headphones/speakers | Phone → H2 |
-|---|---|---|---|
-| [Standard `843986adb6`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16-bit | Transmitter | No |
-| [24-bit `a49363b515`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | Experimental 24-bit | Transmitter; 16-bit encoder input | No |
-| **RX v0.1.4** | Inherited experimental 24-bit | Separate transmitter mode retained | **New SBC receiver mode** |
+| Edition | Local wired music path | H2 → headphones/speakers | Phone → H2 | Download |
+|---|---|---|---|---|
+| [Standard `843986adb6`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16-bit | Transmitter | No | **[⬇ Download ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** |
+| [24-bit `a49363b515`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | Experimental 24-bit | Transmitter; 16-bit encoder input | No | **[⬇ Download ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/rockbox-h2bt-a49363b515-24bit-261110.zip)** |
+| **RX v0.1.4** | Inherited experimental 24-bit | Separate transmitter mode retained | **New SBC receiver mode** | **[⬇ Download ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12.zip)** |
 
 Transmit and receive modes are mutually exclusive. RX is not a Bluetooth relay.
 
@@ -140,11 +140,11 @@ WalkerFans para HIFIWALKER H2, reproductor Hi-Fi / DAP / MP3: actualización de 
 
 RX añade un modo independiente de recepción **móvil → H2** a la edición experimental de audio por cable de 24 bits. También actualiza los nombres de idiomas, el menú Language, sus iconos y el orden de la lista. Los paquetes anteriores siguen siendo independientes.
 
-| Edición | Música local por cable | H2 → auriculares/altavoces | Móvil → H2 |
-|---|---|---|---|
-| [Standard `843986adb6`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16 bits | Transmisión | No |
-| [24-bit `a49363b515`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | 24 bits experimentales | Transmisión; entrada del codificador de 16 bits | No |
-| **RX v0.1.4** | Conserva la ruta experimental de 24 bits | Conserva un modo de transmisión separado | **Nuevo modo receptor SBC** |
+| Edición | Música local por cable | H2 → auriculares/altavoces | Móvil → H2 | Descarga |
+|---|---|---|---|---|
+| [Standard `843986adb6`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-843986adb6-preview) | 16 bits | Transmisión | No | **[⬇ Descargar ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-843986adb6-preview/rockbox-h2bt-843986adb6-261110.zip)** |
+| [24-bit `a49363b515`](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/tag/h2bt-a49363b515-24bit-preview) | 24 bits experimentales | Transmisión; entrada del codificador de 16 bits | No | **[⬇ Descargar ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2bt-a49363b515-24bit-preview/rockbox-h2bt-a49363b515-24bit-261110.zip)** |
+| **RX v0.1.4** | Conserva la ruta experimental de 24 bits | Conserva un modo de transmisión separado | **Nuevo modo receptor SBC** | **[⬇ Descargar ZIP](https://github.com/walkerfans007/rockbox-h2-bluetooth/releases/download/h2-rx-v0.1.4-preview/rockbox-h2bt-H2-RX-v0.1.4-2026-11-12.zip)** |
 
 No se puede transmitir y recibir simultáneamente. RX no funciona como repetidor Bluetooth.
 
